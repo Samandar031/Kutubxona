@@ -1,0 +1,24 @@
+{
+  "name": "kutubxona",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/samandarqodirqulov/Kutubxona.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/samandarqodirqulov/Kutubxona/issues"
+  },
+  "homepage": "https://github.com/samandarqodirqulov/Kutubxona#readme",
+  "dependencies": {
+    "express": "^4.18.0",
+    "morgan": "^1.10.0",
+    "nodemon": "^2.0.15"
+  }
+}
