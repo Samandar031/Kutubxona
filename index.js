@@ -2,19 +2,18 @@ const express = require("express");
 const { use } = require("express/lib/application");
 const fs = require("fs");
 const morgan = require("morgan");
+let cors = require("cors");
 
 const app = express();
 
 app.use(morgan("common"));
 app.use(express.json());
+app.use(cors());
 
 app.use((req, res, next) => {
-  if (req) {
-    req.time = Date.now();
-  }
-  if (res) {
-    res.time = Date.now();
-  }
+  res.setHeader("Acces-Control-Allow-Origin", "*");
+  res.setHeader("Acces-Control-Allow-Methods", "GET,POST,PUT,PATCH,DELETE");
+  res.setHeader("Acces-Contorl-Allow-Methods", "Content-Type", "Authorization");
   next();
 });
 
