@@ -147,17 +147,26 @@ html {
 }
 
 .basic_cards .basic_card .card_description, .basic_cards .basic_card .card_footer {
-  justify-content: space-between;
-  align-items: center;
-  padding: 1.5rem;
-  font-size: 1.8rem;
-  display: flex;
+  padding: 0 1.5rem;
+  font-size: 1.5rem;
   opacity: 0.8;
+ 
+}
+
+.card_name{
+  font-weight:600 ;
+  font-size: 1.6rem;
+  margin-top: 1rem;
 }
 
 .basic_cards .basic_card .card_plus {
-  font-size: 3rem;
+  font-size: 1.4rem;
   cursor: pointer;
+  margin: 0.5rem 0;
+}
+
+.card_price{
+  margin: 1rem 0 2rem 0;
 }
 
 .basic_cards .basic_card .card_btn {
@@ -166,6 +175,8 @@ html {
   padding: .8rem;
   color: var(--toqKok);
   overflow: hidden;
+  
+  margin: 1rem auto;
 }
 
 
@@ -351,6 +362,47 @@ html {
   cursor: pointer;
 }
 
+.home_page{
+  height: 80vh;
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1.5fr 1fr;
+  justify-content: center;
+  align-items: center;
+}
+
+.home_title{
+  
+  font-size: 5rem;
+  margin: 2rem 0;
+  margin-top: 5rem;
+}
+
+ hr {
+  height: 0.4rem;
+  background-color: var(--toqKok);
+  width: 12rem;
+  border: none;
+
+}
+
+.home_description{
+  font-size: 1.4rem;
+  line-height: 2rem;
+  margin: 1rem 0;
+  opacity: 0.8;
+}
+
+.home_btn{
+  border: 2px solid var(--toqKok);
+  padding: 1rem 2rem;
+  width: 15rem;
+  font-size: 1.5rem;
+  text-align: center;
+  margin-top: 2rem;
+}
+
+
 /*# sourceMappingURL=index.b10d73a7.css.map */
 
   </style>
@@ -358,6 +410,19 @@ html {
 <body>
 
   <div class="containerS">
+    <section class="home_page">
+      <div></div>
+      <div>
+        <div class="home_title">This Month</div>
+      <hr>
+      <div class="home_description">
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Rem temporibus error eum assumenda pariatur, facere maxime harum unde incidunt impedit?
+      </div>
+      <div class="home_btn">
+        READ MORE
+      </div>
+      </div>
+    </section>
 
     <section class="navbar">
       <div class="nav_brand">

@@ -7,14 +7,13 @@ const replaceFunc = require("./module/replaceFunc.js");
 const jsdom = require("jsdom");
 const { JSDOM } = jsdom;
 
-let css = fs.readFileSync("./dist/index.b10d73a7.css", "utf-8");
 let html = fs.readFileSync("./index.html", "utf-8");
 
 let cardHtml = fs.readFileSync("./templates/card.html", "utf-8");
 
 let popup = fs.readFileSync("./templates/popup.html", "utf-8");
 
-const dataD = fs.readFileSync("./dev-data/data.json", "utf-8");
+const dataD = fs.readFileSync("./data/kitoblar.json", "utf-8");
 const dataObj = JSON.parse(dataD);
 
 const server = http.createServer((req, res) => {
@@ -25,6 +24,7 @@ const server = http.createServer((req, res) => {
     .join("");
 
   let kelayotganUrl = req.url;
+
   let query = +url.parse(kelayotganUrl, true).query.id;
 
   let output = html.replace("{cardHtml}", changeCard);
@@ -66,4 +66,4 @@ const server = http.createServer((req, res) => {
     res.end(oxiri);
   }
 });
-server.listen("8001", "127.0.0.1");
+server.listen("8005", "127.0.0.1");
