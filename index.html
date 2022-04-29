@@ -363,13 +363,20 @@ html {
 }
 
 .home_page{
-  height: 80vh;
+  height: 100vh;
   width: 100%;
   display: grid;
-  grid-template-columns: 1.5fr 1fr;
+  grid-template-columns: 1fr 1.5fr;
+  color: black;
   justify-content: center;
   align-items: center;
+  background-image: url(./img/Group\ 3.png);
 }
+
+.home_page > div {
+  padding: 2rem;
+ 
+} 
 
 .home_title{
   
@@ -411,7 +418,7 @@ html {
 
   <div class="containerS">
     <section class="home_page">
-      <div></div>
+      
       <div>
         <div class="home_title">This Month</div>
       <hr>
@@ -422,6 +429,8 @@ html {
         READ MORE
       </div>
       </div>
+
+      <div></div>
     </section>
 
     <section class="navbar">
