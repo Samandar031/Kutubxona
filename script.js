@@ -59,3 +59,43 @@ registerBtn.addEventListener("click", function () {
 registerClose.addEventListener("click", function () {
   registerCard.style.display = "none";
 });
+
+const cardContent = document.querySelector(".basic_cards");
+
+function func() {
+  // const url = fetch("http://127.0.0.1:8004/api/v1/consol");
+  // const res = url.json();
+  // console.log(url);
+
+  fetch("http://127.0.0.1:8004/api/v1/consol")
+    .then((response) => response.json())
+    .then((response) => {
+      let kel = response.data.book;
+      renderHtml(kel);
+
+      console.log(kel);
+    })
+    .catch((err) => console.error(err));
+}
+let html;
+function renderHtml(arr) {
+  arr.forEach((val) => {
+    html = `
+    <div class="basic_card">
+    <div class="card_emoji">📙</div>
+    <div class="card_description">
+    <div class="card_name">${val.title}</div>
+    <div class="card_plus">${val.janri}</div>
+    </div>
+    <div class="card_footer">
+    <div class="card_price">${val.aftor}</div>
+    <a class="card_btn" href="product?id={IdProduct}">
+    <span></span> show more
+    </a>
+    </div>
+    </div>
+    `;
+    cardContent.insertAdjacentHTML("beforeend", html);
+  });
+}
+func();
