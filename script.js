@@ -54,10 +54,6 @@ let popupDes = document.querySelector(".popup_basic_description");
 let popupAdd = document.querySelector(".popup_basic_add");
 
 function func() {
-  // const url = fetch("http://127.0.0.1:8004/api/v1/consol");
-  // const res = url.json();
-  // console.log(url);
-
   fetch("http://127.0.0.1:8004/api/v1/consol")
     .then((response) => response.json())
     .then((response) => {
@@ -70,24 +66,25 @@ function func() {
 }
 let html;
 function renderHtml(arr) {
-  arr.forEach((val) => {
+  arr.map((val) => {
     html = `
     <div class="basic_card">
-    <div class="card_emoji">📙</div>
-    <div class="card_description">
-    <div class="card_name">${val.title}</div>
-    <div class="card_plus">${val.janri}</div>
-    </div>
-    <div class="card_footer">
-    <div class="card_price">${val.aftor}</div>
-    <div class="card_btn">
-    <span></span> show more
-    </div>
-    </div>
+      <div class="card_emoji">📙</div>
+        <div class="card_description">
+          <div class="card_name">${val.title}</div>
+          <div class="card_plus">${val.janri}</div>
+          </div>
+          <div class="card_footer">
+          <div class="card_price">${val.aftor}</div>
+        <div class="card_btn">
+        <span></span> show more
+        </div>
+      </div>
     </div>
     `;
 
     popupName.innerHTML = `${val.title}`;
+    // popupName.textContent = `${val.title}`;
     popupDes.innerHTML = `${val.janri}`;
     cardContent.insertAdjacentHTML("beforeend", html);
   });
@@ -107,7 +104,5 @@ body.addEventListener("click", function (e) {
 });
 
 popupClose.addEventListener("click", function () {
-  // if (e.target.classList.contains("popup_close")) {
   popupCard.style.display = "none";
-  // }
 });
