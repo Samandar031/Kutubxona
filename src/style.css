@@ -92,6 +92,27 @@ margin: 0 auto;
 
 }
 
+.about_title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2.6rem;
+  height: 5rem;
+  margin-bottom: 5rem;
+  font-weight: 550; }
+ .about_title span {
+    width: 1.2rem;
+    height: 1.2rem;
+    transform: rotate(45deg);
+    background-color: var(--kok); }
+  .about_title hr {
+    width: 6rem;
+    margin: 1rem;
+    border: 1px dashed var(--kok); }
+ .about_title div {
+    margin: 1rem;
+    color: var(--kok); }
+
 .basic_content {
 width: 134rem;
 margin: 10rem auto 5rem;
@@ -107,7 +128,7 @@ display: grid;
 
 .basic_cards .basic_card {
 width: 25rem;
-height: 35rem;
+height: 36rem;
 border-radius: 0.4rem;
 margin: 1rem auto;
 box-shadow: 0 0 .5rem gray;
@@ -201,6 +222,7 @@ grid-column: 1 / 3 span;
 position: fixed;
 top: 4rem;
 right: 16rem;
+font-size: 3rem;
 }
 
 .popup .popup_cards .popup_basic_card {
@@ -211,10 +233,13 @@ margin-bottom: 5rem;
 display: flex;
 }
 
-.popup .popup_cards .popup_basic_card img {
+.popup .popup_cards .popup_basic_card .card_emoji {
 width: 20rem;
 height: 35rem;
-border: 2px solid red;
+display: flex;
+justify-content: center;
+align-items: center;
+font-size: 5rem;
 }
 
 .popup .popup_cards .popup_basic_card .popup_basic_content {

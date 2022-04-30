@@ -33,21 +33,7 @@ login.addEventListener("click", function (e) {
   }
 });
 
-// popup
-// let popupBtn = document.querySelector(".card_btn");
-// let popupCard = document.querySelector(".popup");
-// let popupClose = document.querySelector(".popup_close");
-
-// popupBtn.addEventListener("click", function () {
-//   popupCard.style.display = "block";
-// });
-
-// popupClose.addEventListener("click", function () {
-//   popupCard.style.display = "none";
-// });
-
 // register
-
 let registerBtn = document.querySelector(".nav_sign");
 let registerCard = document.querySelector(".register");
 let registerClose = document.querySelector(".register_close");
@@ -61,6 +47,11 @@ registerClose.addEventListener("click", function () {
 });
 
 const cardContent = document.querySelector(".basic_cards");
+
+// popup elements
+let popupName = document.querySelector(".popup_basic_title");
+let popupDes = document.querySelector(".popup_basic_description");
+let popupAdd = document.querySelector(".popup_basic_add");
 
 function func() {
   // const url = fetch("http://127.0.0.1:8004/api/v1/consol");
@@ -89,13 +80,34 @@ function renderHtml(arr) {
     </div>
     <div class="card_footer">
     <div class="card_price">${val.aftor}</div>
-    <a class="card_btn" href="product?id={IdProduct}">
+    <div class="card_btn">
     <span></span> show more
-    </a>
+    </div>
     </div>
     </div>
     `;
+
+    popupName.innerHTML = `${val.title}`;
+    popupDes.innerHTML = `${val.janri}`;
     cardContent.insertAdjacentHTML("beforeend", html);
   });
 }
 func();
+
+// popup;
+let popupBtn = document.querySelector(".card_btn");
+let popupCard = document.querySelector(".popup");
+let body = document.querySelector("body");
+let popupClose = document.querySelector(".popup_close");
+
+body.addEventListener("click", function (e) {
+  if (e.target.classList.contains("card_btn")) {
+    popupCard.style.display = "block";
+  }
+});
+
+popupClose.addEventListener("click", function () {
+  // if (e.target.classList.contains("popup_close")) {
+  popupCard.style.display = "none";
+  // }
+});
