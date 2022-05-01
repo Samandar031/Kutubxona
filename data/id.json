@@ -1,0 +1,35 @@
+[
+  {
+    "id": "0",
+    "title": "O'tgan kunlar",
+    "aftor": "Abdulla Qodiriy",
+    "yili": "1920",
+    "janri":"badiy adabiy"
+  },
+    {
+    "id": "1",
+    "title": "Sariq devni minib",
+    "aftor": "Xudoyberdi To'xtaboyev",
+    "yili": "1920",
+    "janri":"Sarguzasht"
+  } ,
+   {
+    "id": "2",
+    "title": "Sarmoyador",
+    "aftor": "Teodor Ruzvlalt",
+    "yili": "2015",
+    "janri":"biznes"
+  } ,
+   {
+    "id": "3",
+    "title": "Baxt yetkazish, milliard dollarlik internet do'kon",
+    "aftor": "Tonni shey",
+    "yili": "2020",
+    "janri":"aftobiografik"
+  },
+  {
+    "id":11,
+    "name":"john",
+    "parol":1111
+  }
+]
