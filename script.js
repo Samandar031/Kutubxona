@@ -48,10 +48,10 @@ registerClose.addEventListener("click", function () {
 
 const cardContent = document.querySelector(".basic_cards");
 
-// popup elements
 let popupName = document.querySelector(".popup_basic_title");
 let popupDes = document.querySelector(".popup_basic_description");
 let popupAdd = document.querySelector(".popup_basic_add");
+// popup elements
 
 function func() {
   fetch("http://127.0.0.1:8004/api/v1/consol")
