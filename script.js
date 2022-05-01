@@ -64,8 +64,8 @@ function func() {
     })
     .catch((err) => console.error(err));
 }
-let html;
 function renderHtml(arr) {
+  let html;
   arr.map((val) => {
     html = `
     <div class="basic_card">
