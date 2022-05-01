@@ -91,11 +91,11 @@ function renderHtml(arr) {
 }
 func();
 
-// popup;
 let popupBtn = document.querySelector(".card_btn");
 let popupCard = document.querySelector(".popup");
 let body = document.querySelector("body");
 let popupClose = document.querySelector(".popup_close");
+// popup;
 
 body.addEventListener("click", function (e) {
   if (e.target.classList.contains("card_btn")) {
